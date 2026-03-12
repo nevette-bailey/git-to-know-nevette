@@ -7,6 +7,7 @@ out/
 
 # Build artifacts
 tsconfig.tsbuildinfo
+/alt-images
 
 # OS
 .DS_Store
