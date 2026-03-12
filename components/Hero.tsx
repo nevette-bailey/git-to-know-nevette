@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col justify-center px-8 md:px-16 py-28 md:py-0 w-1/2">
         {/* Top label */}
         <p className="section-label mb-8 animate-[fadeInUp_0.8s_ease_0.1s_both]">
-          Engineering Leader &amp; Senior IC
+          Technical Leader &amp; Software Engineer
         </p>
 
         {/* Name — large display type, broken for rhythm */}
