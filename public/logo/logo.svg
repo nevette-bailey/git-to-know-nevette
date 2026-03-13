@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="90" viewBox="0 0 240 90">
+  <g transform="translate(40,45)">
+    <ellipse cx="0" cy="-18" rx="7" ry="19" fill="none" stroke="#1C1917" stroke-width="1.2" opacity="0.45" transform="rotate(0)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="19" fill="none" stroke="#1C1917" stroke-width="1.2" opacity="0.45" transform="rotate(60)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="19" fill="none" stroke="#1C1917" stroke-width="1.2" opacity="0.45" transform="rotate(120)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="19" fill="none" stroke="#A64D78" stroke-width="1.5" transform="rotate(180)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="19" fill="none" stroke="#A64D78" stroke-width="1.5" transform="rotate(240)"/>
+    <ellipse cx="0" cy="-18" rx="7" ry="19" fill="none" stroke="#A64D78" stroke-width="1.5" transform="rotate(300)"/>
+    <circle r="4.5" fill="#A64D78"/>
+    <circle r="8.5" fill="none" stroke="#F0E0E8" stroke-width="1.5"/>
+  </g>
+  <line x1="82" y1="6" x2="82" y2="84" stroke="#E5DDD8" stroke-width="0.75"/>
+  <line x1="94" y1="70" x2="94" y2="22" stroke="#1C1917" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="94" y1="22" x2="116" y2="70" stroke="#1C1917" stroke-width="2.6" stroke-linecap="round"/>
+  <line x1="116" y1="22" x2="116" y2="70" stroke="#1C1917" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="125" y1="70" x2="138" y2="22" stroke="#1C1917" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="138" y1="22" x2="151" y2="70" stroke="#1C1917" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="128.5" y1="53" x2="147.5" y2="53" stroke="#1C1917" stroke-width="0.7" stroke-linecap="round"/>
+  <line x1="161" y1="22" x2="161" y2="70" stroke="#A64D78" stroke-width="2" stroke-linecap="round"/>
+  <path d="M161,22 Q178,22 178,33 Q178,44 161,44" fill="none" stroke="#A64D78" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M161,43 Q181,43 181,56 Q181,70 161,70" fill="none" stroke="#A64D78" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
