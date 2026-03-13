@@ -53,14 +53,6 @@ export default function PortraitSketch() {
             );
           }
 
-          // function fburn(x: number, y: number) {
-          //   // burn visited pixel to white so brush seeks fresh edges
-          //   const idx = (y * offscreen.width + x) * 4;
-          //   offscreen.pixels[idx]     = 255;
-          //   offscreen.pixels[idx + 1] = 255;
-          //   offscreen.pixels[idx + 2] = 255;
-          //   offscreen.pixels[idx + 3] = 255;
-          // }
           function fburn(x: number, y: number) {
             const idx = (
                 y * offscreen.width + x
@@ -96,8 +88,8 @@ export default function PortraitSketch() {
             private count = 0;
             private isPink = false;
 
-            private readonly MAX_COUNT = 40;
-            private readonly MAX_SPEED = 3.5;
+            private readonly MAX_COUNT = 100;
+            private readonly MAX_SPEED = 5;
             private readonly PERCEPTION = 5;
             private readonly BOUND = 10;
             private readonly NOISE_SCALE = 120;

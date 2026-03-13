@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row">
       {/* ── Left: Name & tagline ── */}
-      <div className="relative z-10 flex flex-col justify-center px-8 md:px-16 py-28 md:py-0 w-1/2">
+      <div className="relative z-10 flex flex-col justify-center px-8 md:px-16 py-28 md:py-0 w-full md:w-1/2 md:h-screen">
         {/* Top label */}
         <p className="section-label mb-8 animate-[fadeInUp_0.8s_ease_0.1s_both]">
           Technical Leader &amp; Software Engineer
@@ -33,7 +33,7 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-wrap gap-4 animate-[fadeInUp_0.9s_ease_0.45s_both]">
+        <div className="flex flex-wrap flex-col sm:flex-row gap-4 w-fit animate-[fadeInUp_0.9s_ease_0.45s_both]">
           <a href="mailto:contact@nevettebailey.com" className="btn-primary">
             Let&apos;s Talk <span>→</span>
           </a>
@@ -68,7 +68,7 @@ export default function Hero() {
       </div>
 
       {/* ── Right: p5.js sketch ── */}
-      <div className="relative w-1/2 bg-canvas-alt overflow-hidden md:sticky md:top-16 md:min-h-[calc(100vh-4rem)] flex items-center">
+      <div className="relative w-full md:w-1/2 min-h-[60vw] bg-canvas-alt overflow-hidden md:sticky md:top-16 md:min-h-[calc(100vh-4rem)] flex items-center">
         {/* Subtle vertical rule separating columns */}
         <div className="hidden md:block absolute left-0 top-16 bottom-16 w-px bg-canvas-rule" />
         <PortraitSketch />
