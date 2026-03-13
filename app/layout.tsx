@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   title: "Nevette A. Bailey, Ph.D. — Senior Engineer & Technology Leader",
   description:
     "Senior software engineer and fractional technology leader with deep experience in monetization systems, engineering org design, and ethical ML. Based in Brooklyn, NY.",
+  icons: {
+    icon: [
+      { url: "/logo/logo-mark.svg", type: "image/svg+xml" },
+    ],
+    apple: "/logo/logo-mark.svg",
+  },
   metadataBase: new URL("https://nevettebailey.com"),
   openGraph: {
     title: "Nevette A. Bailey, Ph.D.",
@@ -30,14 +36,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
   twitter: {
     card: "summary_large_image",
     title: "Nevette A. Bailey, Ph.D.",
     description: "Senior Engineer & Fractional Technology Leader",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
