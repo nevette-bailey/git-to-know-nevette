@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-    title: "Nevette A. Bailey, Ph.D. — Senior Engineer & Technology Leader",
+    title: "Nevette A. Bailey, Ph.D. — Software Engineer & Technical Leader",
     description:
         "Senior software engineer and fractional technology leader with deep experience in monetization systems, engineering org design, and ethical ML. Based in Brooklyn, NY.",
     icons: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     metadataBase: new URL("https://nevettebailey.com"),
     openGraph: {
         title: "Nevette A. Bailey, Ph.D.",
-        description: "Senior Engineer & Fractional Technology Leader",
+        description: "Software Engineer & Technical Leader",
         url: "https://nevettebailey.com",
         siteName: "Nevette A. Bailey",
         locale: "en_US",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Nevette A. Bailey, Ph.D.",
-        description: "Senior Engineer & Fractional Technology Leader",
+        description: "Software Engineer & Technical Leader",
     },
 };
 
