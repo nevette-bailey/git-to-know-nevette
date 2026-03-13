@@ -22,9 +22,7 @@ export const metadata: Metadata = {
   description:
     "Senior software engineer and fractional technology leader with deep experience in monetization systems, engineering org design, and ethical ML. Based in Brooklyn, NY.",
   icons: {
-    icon: [
-      { url: "/logo/logo-mark.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/logo/logo-mark.svg", type: "image/svg+xml" }],
     apple: "/logo/logo-mark.svg",
   },
   metadataBase: new URL("https://nevettebailey.com"),

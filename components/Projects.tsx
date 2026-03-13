@@ -8,7 +8,12 @@ function useReveal(threshold = 0.1) {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add("visible"); obs.disconnect(); } },
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.classList.add("visible");
+          obs.disconnect();
+        }
+      },
       { threshold }
     );
     obs.observe(el);
@@ -45,23 +50,43 @@ export default function Projects() {
               <h3 className="font-display text-3xl md:text-4xl font-light text-ink-DEFAULT mb-2">
                 First On Screen
               </h3>
-              <p className="font-body text-sm text-ink-muted mb-6 italic">
-                Representation Tracker
-              </p>
+              <p className="font-body text-sm text-ink-muted mb-6 italic">Representation Tracker</p>
 
               {/* Description */}
               <p className="font-body text-sm text-ink-DEFAULT leading-relaxed mb-6 max-w-xl">
-                An ethical ML system for tracking media representation using self-identification-only data. Built on the principle that identity classification in ML should never be derived from appearance alone — it should come from how people describe themselves.
+                An ethical ML system for tracking media representation using
+                self-identification-only data. Built on the principle that identity classification
+                in ML should never be derived from appearance alone — it should come from how people
+                describe themselves.
               </p>
 
               {/* Architecture highlights */}
               <div className="space-y-3 mb-8">
                 {[
-                  { label: "Safety design", detail: "AI suggests, humans verify — no automated production writes" },
-                  { label: "Data pipeline", detail: "Multi-source ingestion from TMDB, Wikipedia, and web search with confidence scoring" },
-                  { label: "Backend", detail: "Three-layer FastAPI architecture with full data provenance and audit trails" },
-                  { label: "Infrastructure", detail: "PostgreSQL / Supabase schema supporting intersectional identities; Celery + Redis for batch jobs" },
-                  { label: "Rigor", detail: "Statistical evaluation with bootstrap confidence intervals and bias detection" },
+                  {
+                    label: "Safety design",
+                    detail: "AI suggests, humans verify — no automated production writes",
+                  },
+                  {
+                    label: "Data pipeline",
+                    detail:
+                      "Multi-source ingestion from TMDB, Wikipedia, and web search with confidence scoring",
+                  },
+                  {
+                    label: "Backend",
+                    detail:
+                      "Three-layer FastAPI architecture with full data provenance and audit trails",
+                  },
+                  {
+                    label: "Infrastructure",
+                    detail:
+                      "PostgreSQL / Supabase schema supporting intersectional identities; Celery + Redis for batch jobs",
+                  },
+                  {
+                    label: "Rigor",
+                    detail:
+                      "Statistical evaluation with bootstrap confidence intervals and bias detection",
+                  },
                 ].map(({ label, detail }) => (
                   <div key={label} className="flex items-start gap-4 font-body text-sm">
                     <span className="text-pink font-medium w-28 flex-shrink-0">{label}</span>
@@ -72,8 +97,19 @@ export default function Projects() {
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2">
-                {["Python", "FastAPI", "PostgreSQL", "Supabase", "Celery", "Redis", "Claude API", "TMDB API"].map((tag) => (
-                  <span key={tag} className="tech-tag">{tag}</span>
+                {[
+                  "Python",
+                  "FastAPI",
+                  "PostgreSQL",
+                  "Supabase",
+                  "Celery",
+                  "Redis",
+                  "Claude API",
+                  "TMDB API",
+                ].map((tag) => (
+                  <span key={tag} className="tech-tag">
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>

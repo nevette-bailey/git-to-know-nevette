@@ -8,7 +8,12 @@ function useReveal(threshold = 0.1) {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add("visible"); obs.disconnect(); } },
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.classList.add("visible");
+          obs.disconnect();
+        }
+      },
       { threshold }
     );
     obs.observe(el);
@@ -21,7 +26,11 @@ const education = [
   { degree: "Ph.D., Chemistry", institution: "Columbia University", year: "2019" },
   { degree: "M.Phil. · M.A., Chemistry", institution: "Columbia University", year: "2015 · 2013" },
   { degree: "M.S. · B.A., Chemistry", institution: "Northwestern University", year: "2011" },
-  { degree: "Software Engineering Immersive", institution: "Grace Hopper Program, Fullstack Academy", year: "2019" },
+  {
+    degree: "Software Engineering Immersive",
+    institution: "Grace Hopper Program, Fullstack Academy",
+    year: "2019",
+  },
 ];
 
 const fellowships = [
@@ -61,10 +70,15 @@ export default function Credentials() {
         <div className="grid md:grid-cols-3 gap-12 md:gap-8">
           {/* Education */}
           <div ref={edu} className="reveal reveal-delay-1">
-            <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-6">Education</p>
+            <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-6">
+              Education
+            </p>
             <div className="space-y-6">
               {education.map(({ degree, institution, year }) => (
-                <div key={degree} className="border-l-2 border-canvas-rule hover:border-pink transition-colors duration-300 pl-4">
+                <div
+                  key={degree}
+                  className="border-l-2 border-canvas-rule hover:border-pink transition-colors duration-300 pl-4"
+                >
                   <p className="font-body text-sm font-medium text-ink-DEFAULT">{degree}</p>
                   <p className="font-body text-xs text-ink-muted mt-0.5">{institution}</p>
                   <p className="font-body text-xs text-ink-faint mt-0.5">{year}</p>
@@ -75,10 +89,15 @@ export default function Credentials() {
 
           {/* Fellowships */}
           <div ref={awards} className="reveal reveal-delay-2">
-            <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-6">Fellowships &amp; Grants</p>
+            <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-6">
+              Fellowships &amp; Grants
+            </p>
             <div className="space-y-6">
               {fellowships.map(({ name, org, year }) => (
-                <div key={name} className="border-l-2 border-canvas-rule hover:border-pink transition-colors duration-300 pl-4">
+                <div
+                  key={name}
+                  className="border-l-2 border-canvas-rule hover:border-pink transition-colors duration-300 pl-4"
+                >
                   <p className="font-body text-sm font-medium text-ink-DEFAULT">{name}</p>
                   <p className="font-body text-xs text-ink-muted mt-0.5">{org}</p>
                   <p className="font-body text-xs text-ink-faint mt-0.5">{year}</p>
@@ -89,9 +108,13 @@ export default function Credentials() {
 
           {/* Publications / Scholar */}
           <div ref={scholar} className="reveal reveal-delay-3">
-            <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-6">Research</p>
+            <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-6">
+              Research
+            </p>
             <div className="border-l-2 border-canvas-rule hover:border-pink transition-colors duration-300 pl-4 mb-8">
-              <p className="font-body text-sm font-medium text-ink-DEFAULT">Peer-reviewed publications</p>
+              <p className="font-body text-sm font-medium text-ink-DEFAULT">
+                Peer-reviewed publications
+              </p>
               <p className="font-body text-xs text-ink-muted mt-0.5">
                 Translational fidelity mechanisms and protein synthesis. NIH and NSF funded.
               </p>
@@ -106,12 +129,16 @@ export default function Credentials() {
             </a>
 
             <div className="mt-10 pt-8 border-t border-canvas-rule">
-              <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-4">Recognition</p>
+              <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-4">
+                Recognition
+              </p>
               <div className="border-l-2 border-canvas-rule hover:border-pink transition-colors duration-300 pl-4">
                 <p className="font-body text-sm font-medium text-ink-DEFAULT">
                   &ldquo;We Lead With Optimism&rdquo; Award
                 </p>
-                <p className="font-body text-xs text-ink-muted mt-0.5">Etsy company-wide, peer-nominated</p>
+                <p className="font-body text-xs text-ink-muted mt-0.5">
+                  Etsy company-wide, peer-nominated
+                </p>
                 <p className="font-body text-xs text-ink-faint mt-0.5">2021</p>
               </div>
             </div>

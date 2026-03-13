@@ -15,12 +15,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Commands
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start local development server |
-| `npm run build` | Production build |
-| `npm run start` | Run production build locally |
-| `npm run lint` | Run ESLint |
+| Command         | Description                    |
+| --------------- | ------------------------------ |
+| `npm run dev`   | Start local development server |
+| `npm run build` | Production build               |
+| `npm run start` | Run production build locally   |
+| `npm run lint`  | Run ESLint                     |
 
 ## Stack
 

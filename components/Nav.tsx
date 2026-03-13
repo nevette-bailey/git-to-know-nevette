@@ -36,13 +36,7 @@ export default function Nav() {
           className="transition-opacity duration-300 hover:opacity-75"
           aria-label="Nevette Bailey — home"
         >
-          <Image
-              src="/logo/logo.svg"
-              alt="Nevette Bailey"
-              width={85}
-              height={32}
-              priority
-          />
+          <Image src="/logo/logo.svg" alt="Nevette Bailey" width={85} height={32} priority />
         </a>
 
         {/* Desktop links */}

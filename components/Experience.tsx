@@ -8,7 +8,12 @@ function useReveal(threshold = 0.1) {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add("visible"); obs.disconnect(); } },
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.classList.add("visible");
+          obs.disconnect();
+        }
+      },
       { threshold }
     );
     obs.observe(el);
@@ -91,13 +96,7 @@ export default function Experience() {
   );
 }
 
-function RoleRow({
-  role,
-  index,
-}: {
-  role: (typeof roles)[0];
-  index: number;
-}) {
+function RoleRow({ role, index }: { role: (typeof roles)[0]; index: number }) {
   const ref = useReveal(0.1);
 
   return (
@@ -120,7 +119,10 @@ function RoleRow({
 
           <ul className="space-y-2 mb-6">
             {role.highlights.map((h) => (
-              <li key={h} className="font-body text-sm text-ink-DEFAULT leading-relaxed flex items-start gap-3">
+              <li
+                key={h}
+                className="font-body text-sm text-ink-DEFAULT leading-relaxed flex items-start gap-3"
+              >
                 <span className="mt-2 w-1 h-1 rounded-full bg-canvas-rule flex-shrink-0" />
                 {h}
               </li>
@@ -129,7 +131,9 @@ function RoleRow({
 
           <div className="flex flex-wrap gap-2">
             {role.tags.map((tag) => (
-              <span key={tag} className="tech-tag">{tag}</span>
+              <span key={tag} className="tech-tag">
+                {tag}
+              </span>
             ))}
           </div>
         </div>

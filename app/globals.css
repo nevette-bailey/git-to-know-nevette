@@ -5,11 +5,11 @@
 :root {
   --font-cormorant: "Cormorant Garamond", Georgia, serif;
   --font-dm-sans: "DM Sans", system-ui, sans-serif;
-  --color-pink: #A64D78;
-  --color-pink-light: #C4789A;
-  --color-pink-muted: #F0E0E8;
-  --color-bg: #FAF8F6;
-  --color-rule: #E5DDD8;
+  --color-pink: #a64d78;
+  --color-pink-light: #c4789a;
+  --color-pink-muted: #f0e0e8;
+  --color-bg: #faf8f6;
+  --color-rule: #e5ddd8;
 }
 
 html {
@@ -18,7 +18,7 @@ html {
 
 body {
   background-color: var(--color-bg);
-  color: #1C1917;
+  color: #1c1917;
   font-family: var(--font-dm-sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -27,8 +27,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.visible {
@@ -36,11 +37,21 @@ body {
   transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
+.reveal-delay-5 {
+  transition-delay: 0.5s;
+}
 
 /* ─── Section label (ABOUT, WORK, etc.) ─── */
 .section-label {
@@ -92,13 +103,15 @@ body {
   gap: 0.5rem;
   padding: 0.875rem 2rem;
   background-color: var(--color-pink);
-  color: #FAF8F6;
+  color: #faf8f6;
   font-family: var(--font-dm-sans);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: background-color 0.25s ease, transform 0.2s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -111,14 +124,17 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  border: 1px solid #1C1917;
-  color: #1C1917;
+  border: 1px solid #1c1917;
+  color: #1c1917;
   font-family: var(--font-dm-sans);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  transition: border-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
 }
 
 .btn-secondary:hover {
@@ -146,7 +162,7 @@ body {
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: #6B6463;
+  color: #6b6463;
 }
 
 /* ─── Cursor ─── */
@@ -154,12 +170,13 @@ body {
   cursor: default;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
 /* ─── Selection color ─── */
 ::selection {
   background-color: var(--color-pink-muted);
-  color: #1C1917;
+  color: #1c1917;
 }

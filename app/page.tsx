@@ -22,8 +22,12 @@ export default function Home() {
       </main>
       <footer className="py-8 border-t border-canvas-rule">
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-          <span className="font-display text-ink-faint text-sm italic">Nevette A. Bailey, Ph.D.</span>
-          <span className="text-xs text-ink-faint font-body tracking-wide">© {new Date().getFullYear()}</span>
+          <span className="font-display text-ink-faint text-sm italic">
+            Nevette A. Bailey, Ph.D.
+          </span>
+          <span className="text-xs text-ink-faint font-body tracking-wide">
+            © {new Date().getFullYear()}
+          </span>
         </div>
       </footer>
     </>

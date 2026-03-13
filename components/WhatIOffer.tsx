@@ -8,7 +8,12 @@ function useReveal(threshold = 0.15) {
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { el.classList.add("visible"); observer.disconnect(); } },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("visible");
+          observer.disconnect();
+        }
+      },
       { threshold }
     );
     observer.observe(el);
@@ -57,21 +62,30 @@ export default function WhatIOffer() {
               <div>
                 <p className="section-label mb-2">Track 01</p>
                 <h3 className="font-display text-2xl font-light text-ink-DEFAULT">
-                  Fractional Technology<br />Leadership
+                  Fractional Technology
+                  <br />
+                  Leadership
                 </h3>
               </div>
               <div className="w-8 h-8 rounded-full border border-canvas-rule flex items-center justify-center group-hover:border-pink group-hover:bg-pink transition-colors duration-300">
-                <span className="font-body text-xs text-ink-faint group-hover:text-canvas-DEFAULT transition-colors duration-300">→</span>
+                <span className="font-body text-xs text-ink-faint group-hover:text-canvas-DEFAULT transition-colors duration-300">
+                  →
+                </span>
               </div>
             </div>
 
             <p className="font-body text-sm text-ink-muted leading-relaxed mb-8">
-              For early-stage and scaling companies that need executive engineering leadership without a full-time commitment. I&apos;ve built an engineering organization from zero — and I know what it costs to get those decisions wrong early.
+              For early-stage and scaling companies that need executive engineering leadership
+              without a full-time commitment. I&apos;ve built an engineering organization from zero
+              — and I know what it costs to get those decisions wrong early.
             </p>
 
             <ul className="space-y-3">
               {fractionalItems.map((item) => (
-                <li key={item} className="flex items-start gap-3 font-body text-sm text-ink-DEFAULT">
+                <li
+                  key={item}
+                  className="flex items-start gap-3 font-body text-sm text-ink-DEFAULT"
+                >
                   <span className="mt-1.5 w-1 h-1 rounded-full bg-pink flex-shrink-0" />
                   {item}
                 </li>
@@ -88,21 +102,29 @@ export default function WhatIOffer() {
               <div>
                 <p className="section-label text-pink-light mb-2">Track 02</p>
                 <h3 className="font-display text-2xl font-light text-canvas-DEFAULT">
-                  Senior<br />Engineering
+                  Senior
+                  <br />
+                  Engineering
                 </h3>
               </div>
               <div className="w-8 h-8 rounded-full border border-ink-muted flex items-center justify-center group-hover:border-pink group-hover:bg-pink transition-colors duration-300">
-                <span className="font-body text-xs text-canvas-rule group-hover:text-canvas-DEFAULT transition-colors duration-300">→</span>
+                <span className="font-body text-xs text-canvas-rule group-hover:text-canvas-DEFAULT transition-colors duration-300">
+                  →
+                </span>
               </div>
             </div>
 
             <p className="font-body text-sm text-canvas-rule leading-relaxed mb-8">
-              For teams that need a senior IC who can own complex, high-stakes systems independently — and elevate the engineers around them.
+              For teams that need a senior IC who can own complex, high-stakes systems independently
+              — and elevate the engineers around them.
             </p>
 
             <ul className="space-y-3">
               {icItems.map((item) => (
-                <li key={item} className="flex items-start gap-3 font-body text-sm text-canvas-DEFAULT">
+                <li
+                  key={item}
+                  className="flex items-start gap-3 font-body text-sm text-canvas-DEFAULT"
+                >
                   <span className="mt-1.5 w-1 h-1 rounded-full bg-pink flex-shrink-0" />
                   {item}
                 </li>

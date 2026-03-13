@@ -36,27 +36,23 @@ export default function PortraitSketch() {
 
           function getCanvasDims(): { w: number; h: number } {
             const el = containerRef.current;
-            if (!el) return {w: 480, h: 524};
+            if (!el) return { w: 480, h: 524 };
             const w = el.clientWidth;
-            return {w, h: Math.round(w / IMG_ASPECT)};
+            return { w, h: Math.round(w / IMG_ASPECT) };
           }
 
           function fget(x: number, y: number): import("p5").Color {
-            const idx = (
-                y * offscreen.width + x
-            ) * 4;
+            const idx = (y * offscreen.width + x) * 4;
             return p.color(
-                offscreen.pixels[idx],
-                offscreen.pixels[idx + 1],
-                offscreen.pixels[idx + 2],
-                offscreen.pixels[idx + 3]
+              offscreen.pixels[idx],
+              offscreen.pixels[idx + 1],
+              offscreen.pixels[idx + 2],
+              offscreen.pixels[idx + 3]
             );
           }
 
           function fburn(x: number, y: number) {
-            const idx = (
-                y * offscreen.width + x
-            ) * 4;
+            const idx = (y * offscreen.width + x) * 4;
             // Lighten by 60 per visit instead of jumping to 255
             // strong edges take multiple passes to exhaust, spreading brush around
             offscreen.pixels[idx] = Math.min(255, offscreen.pixels[idx] + 60);
@@ -67,12 +63,13 @@ export default function PortraitSketch() {
           function coverCopy(src: import("p5").Image, dst: import("p5").Image) {
             const srcAspect = src.width / src.height;
             const dstAspect = dst.width / dst.height;
-            let sx = 0, sy = 0, sw = src.width, sh = src.height;
+            let sx = 0,
+              sy = 0,
+              sw = src.width,
+              sh = src.height;
             if (srcAspect > dstAspect) {
               sw = Math.floor(src.height * dstAspect);
-              sx = Math.floor((
-                  src.width - sw
-              ) / 2);
+              sx = Math.floor((src.width - sw) / 2);
             } else {
               sh = Math.floor(src.width / dstAspect);
             }
@@ -125,35 +122,35 @@ export default function PortraitSketch() {
 
               // perlin noise adds organic flow
               const angle = p.map(
-                  p.noise(this.pos.x / this.NOISE_SCALE, this.pos.y / this.NOISE_SCALE, z),
-                  0, 1, 0, p.TWO_PI * 4
+                p.noise(this.pos.x / this.NOISE_SCALE, this.pos.y / this.NOISE_SCALE, z),
+                0,
+                1,
+                0,
+                p.TWO_PI * 4
               );
               const nf = p5.Vector.fromAngle(angle);
               force.add(nf.mult(force.mag() < 0.01 ? 0.12 : 0.02));
 
               // soft boundary repulsion
-              if (this.pos.x < this.BOUND) force.x += (
-                  this.BOUND - this.pos.x
-              ) / this.BOUND * 0.2;
-              if (this.pos.x > p.width - this.BOUND) force.x -= (
-                  this.pos.x - (
-                      p.width - this.BOUND
-                  )
-              ) / this.BOUND * 0.2;
-              if (this.pos.y < this.BOUND) force.y += (
-                  this.BOUND - this.pos.y
-              ) / this.BOUND * 0.2;
-              if (this.pos.y > p.height - this.BOUND) force.y -= (
-                  this.pos.y - (
-                      p.height - this.BOUND
-                  )
-              ) / this.BOUND * 0.2;
+              if (this.pos.x < this.BOUND)
+                force.x += ((this.BOUND - this.pos.x) / this.BOUND) * 0.2;
+              if (this.pos.x > p.width - this.BOUND)
+                force.x -= ((this.pos.x - (p.width - this.BOUND)) / this.BOUND) * 0.2;
+              if (this.pos.y < this.BOUND)
+                force.y += ((this.BOUND - this.pos.y) / this.BOUND) * 0.2;
+              if (this.pos.y > p.height - this.BOUND)
+                force.y -= ((this.pos.y - (p.height - this.BOUND)) / this.BOUND) * 0.2;
 
               this.vel.add(force).mult(0.9);
               if (this.vel.mag() > this.MAX_SPEED) this.vel.setMag(this.MAX_SPEED);
               this.pos.add(this.vel);
 
-              if (this.pos.x < 0 || this.pos.x > p.width || this.pos.y < 0 || this.pos.y > p.height) {
+              if (
+                this.pos.x < 0 ||
+                this.pos.x > p.width ||
+                this.pos.y < 0 ||
+                this.pos.y > p.height
+              ) {
                 this.reset();
               }
             }
@@ -215,7 +212,7 @@ export default function PortraitSketch() {
           };
 
           p.setup = () => {
-            const {w, h} = getCanvasDims();
+            const { w, h } = getCanvasDims();
             const cnv = p.createCanvas(w, h);
             cnv.parent(containerRef.current!);
             p.colorMode(p.RGB, 255, 255, 255, 255);
@@ -278,7 +275,5 @@ export default function PortraitSketch() {
     };
   }, []);
 
-  return (
-      <div ref={containerRef} className="w-full" aria-hidden="true" />
-  );
+  return <div ref={containerRef} className="w-full" aria-hidden="true" />;
 }

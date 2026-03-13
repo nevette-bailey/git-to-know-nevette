@@ -19,7 +19,8 @@ export default function Hero() {
 
         {/* Name — large display type, broken for rhythm */}
         <h1 className="display-name text-[clamp(3.5rem,8vw,6.5rem)] text-ink-DEFAULT mb-6 animate-[fadeInUp_0.9s_ease_0.2s_both]">
-          Nevette A.<br />
+          Nevette A.
+          <br />
           <span className="text-pink">Bailey</span>
           <span className="text-ink-faint font-light">, Ph.D.</span>
         </h1>
@@ -47,7 +48,10 @@ export default function Hero() {
           {[
             { label: "LinkedIn", href: "https://www.linkedin.com/in/nevetteb" },
             { label: "GitHub", href: "https://github.com/nevette-bailey" },
-            { label: "Scholar", href: "https://scholar.google.com/citations?user=V5HlmfcAAAAJ&hl=en" },
+            {
+              label: "Scholar",
+              href: "https://scholar.google.com/citations?user=V5HlmfcAAAAJ&hl=en",
+            },
           ].map(({ label, href }) => (
             <a
               key={label}
@@ -76,15 +80,27 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-canvas-alt to-transparent pointer-events-none" />
       </div>
 
-
       <style jsx>{`
         @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         @keyframes scrollPulse {
-          0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-          50% { opacity: 1; transform: scaleY(1); }
+          0%,
+          100% {
+            opacity: 0.3;
+            transform: scaleY(0.6);
+          }
+          50% {
+            opacity: 1;
+            transform: scaleY(1);
+          }
         }
       `}</style>
     </section>

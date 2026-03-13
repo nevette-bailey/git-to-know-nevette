@@ -8,7 +8,12 @@ function useReveal(threshold = 0.1) {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { el.classList.add("visible"); obs.disconnect(); } },
+      ([e]) => {
+        if (e.isIntersecting) {
+          el.classList.add("visible");
+          obs.disconnect();
+        }
+      },
       { threshold }
     );
     obs.observe(el);
@@ -31,10 +36,7 @@ export default function Contact() {
           <span className="font-display text-6xl font-light text-ink-muted select-none">06</span>
         </div>
 
-        <div
-          ref={content}
-          className="reveal grid md:grid-cols-2 gap-12 md:gap-16 items-start"
-        >
+        <div ref={content} className="reveal grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           {/* Left: statement */}
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-light text-canvas-DEFAULT leading-tight mb-6">
@@ -52,10 +54,14 @@ export default function Contact() {
               className="group flex items-center justify-between border border-ink-muted hover:border-pink px-6 py-5 transition-colors duration-300"
             >
               <div>
-                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">Email</p>
+                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">
+                  Email
+                </p>
                 <p className="font-body text-sm text-canvas-DEFAULT">contact@nevettebailey.com</p>
               </div>
-              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">→</span>
+              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">
+                →
+              </span>
             </a>
 
             <a
@@ -65,10 +71,14 @@ export default function Contact() {
               className="group flex items-center justify-between border border-ink-muted hover:border-pink px-6 py-5 transition-colors duration-300"
             >
               <div>
-                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">LinkedIn</p>
+                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">
+                  LinkedIn
+                </p>
                 <p className="font-body text-sm text-canvas-DEFAULT">linkedin.com/in/nevetteb</p>
               </div>
-              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">↗</span>
+              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">
+                ↗
+              </span>
             </a>
 
             <a
@@ -78,10 +88,14 @@ export default function Contact() {
               className="group flex items-center justify-between border border-ink-muted hover:border-pink px-6 py-5 transition-colors duration-300"
             >
               <div>
-                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">GitHub</p>
+                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">
+                  GitHub
+                </p>
                 <p className="font-body text-sm text-canvas-DEFAULT">github.com/nevette-bailey</p>
               </div>
-              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">↗</span>
+              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">
+                ↗
+              </span>
             </a>
 
             <a
@@ -91,10 +105,14 @@ export default function Contact() {
               className="group flex items-center justify-between border border-ink-muted hover:border-pink px-6 py-5 transition-colors duration-300"
             >
               <div>
-                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">Google Scholar</p>
+                <p className="font-body text-xs tracking-widest uppercase text-ink-faint mb-1">
+                  Google Scholar
+                </p>
                 <p className="font-body text-sm text-canvas-DEFAULT">Publications &amp; Research</p>
               </div>
-              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">↗</span>
+              <span className="text-ink-faint group-hover:text-pink transition-colors duration-300 text-lg">
+                ↗
+              </span>
             </a>
           </div>
         </div>
