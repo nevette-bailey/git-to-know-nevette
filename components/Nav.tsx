@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-    {href: "#about", label: "About"},
-    {href: "#work", label: "Work"},
-    {href: "#projects", label: "Projects"},
-    {href: "#contact", label: "Contact"},
+    {href: "/#about", label: "About"},
+    {href: "/#work", label: "Work"},
+    {href: "/#projects", label: "Projects"},
+    {href: "/#contact", label: "Contact"},
     {href: "/resume", label: "Resume"},
 ];
 
@@ -32,13 +32,13 @@ export default function Nav() {
         >
             <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                 {/* Monogram */}
-                <a
-                    href="#"
+                <Link
+                    href="/"
                     className="transition-opacity duration-300 hover:opacity-75"
                     aria-label="Nevette Bailey — home"
                 >
                     <Image src="/logo/logo.svg" alt="Nevette Bailey" width={85} height={32} priority/>
-                </a>
+                </Link>
 
                 {/* Desktop links */}
                 <ul className="hidden md:flex items-center gap-10">
