@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
   { href: "#about", label: "About" },
@@ -28,13 +29,20 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Monogram */}
         <a
           href="#"
-          className="font-display text-xl font-light tracking-wider text-ink-DEFAULT hover:text-pink transition-colors duration-300"
+          className="transition-opacity duration-300 hover:opacity-75"
+          aria-label="Nevette Bailey — home"
         >
-          NAB
+          <Image
+              src="/logo/logo.svg"
+              alt="Nevette Bailey"
+              width={85}
+              height={32}
+              priority
+          />
         </a>
 
         {/* Desktop links */}
