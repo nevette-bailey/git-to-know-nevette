@@ -35,7 +35,7 @@ describe("Projects", () => {
             screen.getByText(/ADHD brain actually works/i)
         ).toBeInTheDocument();
         expect(
-            screen.getByText(/dating app built for people who center their lives around their dogs/i)
+            screen.getByText(/Tether re-centers how you connect with people/i)
         ).toBeInTheDocument();
     });
 
