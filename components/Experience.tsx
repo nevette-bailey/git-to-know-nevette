@@ -24,9 +24,18 @@ function useReveal(threshold = 0.1) {
 
 const roles = [
     {
+        company: "Capital One",
+        title: "Lead Software Engineer",
+        period: "2026 – Present",
+        tags: [],
+        highlights: [
+            "Newly joined — responsibilities and highlights to come",
+        ],
+    },
+    {
         company: "First On Screen",
         title: "Independent Research Engineer",
-        period: "2025 – Present",
+        period: "2025 – 2026",
         tags: [
             "Python", "FastAPI", "PostgreSQL", "Celery", "Redis", "Supabase", "LLM Pipelines", "Claude API", "React",
             "Next.js", "TypeScript"
